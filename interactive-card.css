@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	font-family: 'Space Grotesk', sans-serif;
+}
+
+header {
+	width: 100vw;
+	height: 250px;
+	background-image: url(./images/bg-main-mobile.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.backcard {
+	display: flex;
+	position: relative;
+	top: 15%;
+	left: 15%;
+	width: 80vw;
+	height: 170px;
+	background-image: url(./images/bg-card-back.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding: 2.5rem;
+}
+
+.cvv {
+	align-self: center;
+	margin-left: auto;
+	color:hsl(270, 3%, 87%);
+	font-size: 10px;
+	letter-spacing: 1.5px;
+}
+
+.frontcard {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 12%;
+	left: 5%;
+	width: 80vw;
+	height: 170px;
+	background-image: url(./images/bg-card-front.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding: 1rem;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 20px 20px 10px rgba(0, 0, 0, 0.1);
+}
+
+.circles {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 2rem;
+}
+
+.big-circle {
+	width: 45px;
+	height: 45px;
+	background-color: hsl(0, 0%, 100%);
+	border-radius: 25px;
+}
+
+.small-circle {
+	width: 20px;
+	height: 20px;
+	border: 1px solid hsl(0, 0%, 100%);
+	border-radius: 25px;
+}
+
+.card-number {
+	text-align: center;
+	color:hsl(0, 0%, 100%);
+	font-size: 1.3rem;
+	letter-spacing: 1.8px;
+}
+
+.card-info {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 1rem;
+}
+
+.holdername, .expiry-date {
+	text-transform: uppercase;
+	color:hsl(0, 0%, 100%);
+	font-size: 13px;
+	letter-spacing: 1.8px;
+	text-align: center;
+}
+
+main {
+	margin-top: 6rem;
+	padding: 1rem;
+}
+
+label {
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	font-weight: 500;
+	color: hsl(278, 68%, 11%);
+	margin-bottom: 1rem;
+}
+
+.info {
+	width: 100%;
+	height: 50px;
+	outline: none;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	padding-left: 1rem;
+	border: 1px solid hsl(279, 6%, 55%);
+	border-radius: 10px;
+	font-size: 18px;
+}
+
+.info::placeholder {
+	font-size: 20px;
+	color: hsl(270, 3%, 87%);
+	font-family: 'Space Grotesk', sans-serif;
+}
+
+#number-error {
+	margin-top: -1.8rem;
+	color: hsl(0, 100%, 66%);
+	display: none;
+}
+
+.digit-info {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 0.5rem;
+}
+
+.date {
+	display: flex;
+	justify-content: space-between;
+	width: 180px;
+	margin-top: 0.8rem;
+}
+
+.date input {
+	width: 85px;
+	height: 50px;
+	border-radius: 10px;
+	padding-left: 1rem;
+	outline: none;
+	border: 1px solid hsl(279, 6%, 55%);
+	font-size: 18px;
+}
+
+.date input::placeholder {
+	font-size: 20px;
+	color: hsl(270, 3%, 87%);
+	font-family: 'Space Grotesk', sans-serif;
+}
+
+.error {
+	color: hsl(0, 100%, 66%);
+	font-size: 12px;
+}
+
+.cvc {
+	width: 150px;
+	height: 50px;
+	border-radius: 10px;
+	padding-left: 1rem;
+	margin-top: 0.8rem;
+	outline: none;
+	border: 1px solid hsl(279, 6%, 55%);
+	font-size: 18px;
+}
+
+.cvc::placeholder {
+	font-size: 20px;
+	color: hsl(270, 3%, 87%);
+	font-family: 'Space Grotesk', sans-serif;
+}
+
+.submit {
+	width: 100%;
+	height: 50px;
+	border-radius: 10px;
+	outline: none;
+	background-color:hsl(278, 68%, 11%);
+	margin-top: 2rem;
+	color:hsl(0, 0%, 100%);
+	font-size: 20px;
+	font-family: 'Space Grotesk', sans-serif;
+}
+
+.thank-you {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	text-align: center;
+	margin: 7rem 1rem 0 1rem;
+	display: none;
+}
+
+.thank-you h1 {
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 2rem;
+	color:hsl(278, 68%, 11%);
+}
+
+.thank-you p {
+	font-size: 20px;
+	margin-bottom: 1.5rem;
+	color: hsl(279, 6%, 55%);
+}
+
+.thank-you a {
+	text-decoration: none;
+	background-color:hsl(278, 68%, 11%);
+	width: 100%;
+	padding: 1rem 2rem;
+	color:hsl(0, 0%, 100%);
+	font-size: 20px;
+	border-radius: 10px;
+}
+
+
+@media only screen and (min-width: 1130px) {
+
+	.container {
+		width: 70vw;
+		display: flex;
+		margin: 0 auto;
+	}
+
+	header {
+		width: 20vw;
+		height: 100%;
+		background-image: url(./images/bg-main-desktop.png);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
+
+	.backcard {
+		width: 23vw;
+		height: 250px;
+		top: 55%;
+		left: 50%;
+		padding: 3rem;
+		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 20px 20px 10px rgba(0, 0, 0, 0.1);
+	}
+
+	.cvv {
+		font-size: 18px;
+	}
+
+	.frontcard {
+		position: relative;
+		width: 23vw;
+		height: 250px;
+		top: 0%;
+		left: 30%;
+		padding: 2rem;
+	}
+
+	.card-number {
+		font-size: 1.93rem;
+	}
+
+	.holdername, .expiry-date {
+		font-size: 18px;
+		margin-top: 2rem;
+	}
+
+	.form {
+		align-self: center;
+		margin-left: 20rem;
+		margin-top: 0;
+	}
+
+	.info, #month, #year, .cvc, .submit {
+		cursor: pointer;
+	}
+
+	.thank-you {
+		width: 400px;
+		align-self: center;
+		margin-top: 0;
+		margin-left: 20rem;
+	}
+}

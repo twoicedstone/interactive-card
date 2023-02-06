@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="interactive-card.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="backcard">
+        <p class="cvv">000</p>
+      </div>
+      
+      <div class="frontcard">
+        <div class="circles">
+          <div class="big-circle"></div>
+          <div class="small-circle"></div>
+        </div>
+        
+        <p class="card-number">0000 0000 0000 0000</p>
+        <div class="card-info">
+          <p class="holdername">Jane Appleseed</p>
+          <p class="expiry-date"><span class="month-1">00</span>/<span class="year-1">00</span></p>
+        </div>
+      </div>
+    </header>
+  
+    <main class="form">
+      <form action="#">
+        <div class="row">
+          <label for="chname">Cardholder Name</label>
+          <input class="info" type="text" id="chname" name="chname" placeholder="e.g. Jane Appleseed" onkeyup="validateName()">
+          <div class="error" id="nameErr"></div>
+        </div>
+        <div class="row">
+          <label for="cnumber">Card Number</label>
+          <input class="info" type="text" id="cnumber" name="cnumber" placeholder="e.g. 1234 5678 9123 0000" onkeyup="validateNumber()">
+          <div class="error" id="numberErr"></div>
+        </div>
+        
+        <div class="digit-info">
+          <div>
+            <label for="exdate">Exp. Date (MM/YY)</label>
+            <div class="date">
+              <div>
+                <input type="text" name="exdate" id="month" placeholder="MM" onkeyup="validateMonth()">
+                <div class="error" id="dateErr"></div>
+              </div>
+              <div>
+                <input type="text" name="exdate" id="year" placeholder="YY" onkeyup="validateYear()">
+                <div class="error" id="yearErr"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <label for="cvc">CVC</label><br>
+            <input class="cvc" type="text" id="cvc" name="cvc" placeholder="e.g. 123" onkeyup="validateCVC()">
+            <div class="error" id="cvcErr"></div>
+          </div>
+        </div>
+        <div>
+          <input class="submit" type="submit" value="Confirm" onclick="validateForm()">
+        </div>
+      </form>
+    </main>
+  
+  
+    <!-- Completed state start -->
+    <section class="thank-you">
+      <div>
+        <img src="./images/icon-complete.svg" alt="">
+      </div>
+      <h1>Thank you!</h1>
+      <p>We've added your card details</p>
+      <a href="">Continue</a>
+    </section>
+  </div>
+  
+  <script src="interactive-card.js"></script>
+</body>
+</html>
