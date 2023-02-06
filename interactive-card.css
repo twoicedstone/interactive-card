@@ -230,6 +230,44 @@ label {
 	border-radius: 10px;
 }
 
+@media only screen and (min-width: 500px) {
+
+	.backcard {
+		top: 15%;
+		left: 15%;
+		width: 80vw;
+		height: 200px;
+	}
+
+	.frontcard {
+		top: 15%;
+		left: 5%;
+		width: 80vw;
+		height: 200px;
+	}
+
+	.card-number {
+		font-size: 1.88rem;
+	}
+
+	.holdername, .expiry-date {
+		font-size: 18px;
+	}
+
+	.card-info {
+		margin-top: 1.5rem;
+	}
+
+	.cvv {
+		font-size: 18px;
+	}
+
+	main {
+		margin-top: 8rem;
+		padding: 2rem;
+	}
+}
+
 
 @media only screen and (min-width: 1130px) {
 
