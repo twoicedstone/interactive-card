@@ -230,7 +230,7 @@ label {
 	border-radius: 10px;
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 400px) {
 
 	.backcard {
 		top: 15%;
@@ -240,14 +240,14 @@ label {
 	}
 
 	.frontcard {
-		top: 15%;
+		top: 16.5%;
 		left: 5%;
 		width: 80vw;
 		height: 200px;
 	}
 
 	.card-number {
-		font-size: 1.88rem;
+		font-size: 1.45rem;
 	}
 
 	.holdername, .expiry-date {
