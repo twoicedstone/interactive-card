@@ -134,16 +134,7 @@ function validateCVC() {
 
 function validateForm() {
 	
-	if ((!validateNumber() || !validateMonth() || !validateYear() || !validateCVC() || !validateName()) === true) {
-		nameError.innerHTML = "Can't be blank";
-		numberError.innerHTML = "Can't be blank";
-		dateError.innerHTML = "Can't be blank";
-		yearError.innerHTML = "Can't be blank";
-		cvcError.innerHTML = "Can't be blank";
-		document.querySelector(".info").style.border = "1px solid hsl(0, 100%, 66%)";
-		document.getElementById("month").style.border = "1px solid hsl(0, 100%, 66%)";
-		document.getElementById("year").style.border = "1px solid hsl(0, 100%, 66%)";
-		document.getElementById("cvc").style.border = "1px solid hsl(0, 100%, 66%)";
+	if ((!validateName() || !validateNumber() || !validateMonth() || !validateYear() || !validateCVC()) === true) {
 		return false;
 	}
 
@@ -153,9 +144,8 @@ function validateForm() {
 		dateError.innerHTML = "";
 		yearError.innerHTML = "";
 		cvcError.innerHTML = "";
+		document.querySelector(".form").style.display = "none";
+		document.querySelector(".thank-you").style.display = "flex";
+		return true;
 	}
-
-	document.querySelector(".form").style.display = "none";
-	document.querySelector(".thank-you").style.display = "flex";
-	return true;
 }
